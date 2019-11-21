@@ -1,0 +1,36 @@
+{
+  "manifest_version": 2,
+  "name": "Slacker",
+  "version": "1.0.0",
+  "description": "Make slack great again.",
+  "icons": {
+    "128": "icon-128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.slack.com/*"
+      ],
+      "js": [
+        "injector.js"
+      ],
+      "all_frames": true,
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "webRequest",
+    "webNavigation",
+    "*://*.slack.com/*"
+  ],
+  "web_accessible_resources": [
+    "index.js"
+  ],
+  "externally_connectable": {
+    "matches": [
+      "*://*.slack.com/*",
+      "chrome-extension://pfbpmedpkpihflpokecnondjhjhddkmd/*"
+    ]
+  }
+}
