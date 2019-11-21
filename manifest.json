@@ -29,8 +29,7 @@
   ],
   "externally_connectable": {
     "matches": [
-      "*://*.slack.com/*",
-      "chrome-extension://pfbpmedpkpihflpokecnondjhjhddkmd/*"
+      "*://*.slack.com/*"
     ]
   }
 }
