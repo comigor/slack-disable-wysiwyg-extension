@@ -1,25 +1,10 @@
 function disableBadEditor() {
-  let REMOVED_BAD_EDITOR = false;
   try {
-    const teamId = window.slackDebug.activeTeamId;
-    const redux = window.slackDebug[teamId].redux;
-    const experiments = redux.getState().experiments;
-    const filteredExperiments = {};
+    const redux = slackDebug[slackDebug.activeTeamId].redux;
+    const { wysiwyg_composer, wysiwyg_composer_ios, wysiwyg_composer_webapp, ...payload } = redux.getState().experiments;
+    redux.dispatch({ type: '[19] Bulk add experiment assignments to redux', payload });
 
-    for (const key in experiments) {
-      if (!key.includes('wysiwyg')) {
-        filteredExperiments[key] = experiments[key];
-      } else {
-        REMOVED_BAD_EDITOR = true;
-      }
-    }
-
-    redux.dispatch({
-      type: '[19] Bulk add experiment assignments to redux',
-      payload: filteredExperiments
-    });
-
-    if (REMOVED_BAD_EDITOR) {
+    if (wysiwyg_composer_webapp) {
       console.log('Bad editor disabled successfully!');
       return;
     }
