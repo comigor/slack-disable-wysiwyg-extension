@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Slacker",
   "version": "1.0.0",
-  "description": "Make slack great again.",
+  "description": "Make Slack great again.",
   "icons": {
     "128": "icon-128.png"
   },

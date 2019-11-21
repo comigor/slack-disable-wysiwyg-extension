@@ -1,6 +1,8 @@
-# Slack Disable WYSIWYG Bookmarklet
+# Slack Disable WYSIWYG Extension
 
-*Disables the WYSIWYG editor in Slack.*
+*Make Slack great again.*
+
+Forked from [kfahy/slack-disable-wysiwyg-bookmarklet](https://github.com/kfahy/slack-disable-wysiwyg-bookmarklet).
 
 ## Motivation
 
@@ -14,8 +16,9 @@ functionality, you can use this bookmarklet to temporarily disable all
 WYSIWYG A/B tests, which should restore the old editor functionality.
 
 ## Usage
-1. Copy the contents of `index.js`
-2. Paste into the URL field of a browser bookmark
-3. Navigate to a Slack workspace in that browser
-4. Execute the bookmarklet to disable the WYSIWYG editor
-5. Repeat each time you reload slack
+1. Clone or download this repository as zip
+2. Go to `about:extensions` on chrome
+3. Enabled *Developer mode*
+4. Click on *Load unpacked* and select this repo folder
+5. ???
+6. Profit
